@@ -1,6 +1,6 @@
 # typer
 
-A new Flutter project.
+Type writer effect on text using async generator and stream builder
 
 ## Getting Started
 
