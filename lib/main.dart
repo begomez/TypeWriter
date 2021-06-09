@@ -52,16 +52,20 @@ class TyperTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final int MAX_LINES = 3;
     return StreamBuilder<String>(
         initialData: "",
         stream: this.data.toStream(),
         builder: (BuildContext cntxt, AsyncSnapshot<String> snap) {
           if (snap.hasData) {
-            return Text(snap.data);
+            return Text(
+              snap.data,
+              maxLines: MAX_LINES,
+            );
           } else {
             return Text(
               "",
-              maxLines: 3,
+              maxLines: MAX_LINES,
             );
           }
         });
